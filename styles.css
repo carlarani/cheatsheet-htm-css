@@ -1,0 +1,470 @@
+body {
+    font-size: 20px;
+}
+
+.main-table {
+    width: 95%;
+    line-height: 30px;
+    border: 3px solid;
+    margin:20px;
+}
+
+td {
+    border: 1px solid;
+    max-width:300px;
+}
+
+
+.example-td{
+    border:0.5px thin;
+}
+
+code {
+    background-color: lightgray;
+}
+
+#css-font-family{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#css-font-size12{
+    font-size:12px;
+}
+#css-font-size24{
+    font-size:24px;
+}
+#css-font-size48{
+    font-size:48px;
+}
+#css-font-size-small{
+    font-size:small;
+}
+#css-font-size-medium{
+    font-size:medium;
+}
+#css-font-size-xx-large{
+    font-size:xx-large;
+}
+
+#css-font-variant-small-caps{
+    font-variant: small-caps;
+}
+
+#css-text-transform-capitalize{
+    text-transform: capitalize;
+}
+#css-text-transform-uppercase{
+    text-transform: uppercase;
+}
+#css-text-transform-lowercase{
+    text-transform:lowercase;
+}
+
+#css-text-indent{
+    text-indent: 60px;
+}
+
+#css-letter-spacing1{
+    letter-spacing: 5px;
+}
+#css-letter-spacing2{
+    letter-spacing: 10px;
+}
+#css-letter-spacing3{
+    letter-spacing: -3px;
+}
+
+#css-word-spacing1{
+    word-spacing: 30px;
+}
+#css-word-spacing2{
+    word-spacing: 80px;
+}
+#css-word-spacing3{
+    word-spacing: -10px;
+}
+
+#css-font-style-italic{
+    font-style: italic;
+}
+#css-font-style-normal{
+    font-style: italic;
+}
+#css-font-style-oblique{
+    font-style: oblique;
+}
+
+#css-font-weight-bold{
+    font-weight: bold;
+}
+#css-font-weight-bolder{
+    font-weight: bolder;
+}
+#css-font-weight-lighter{
+    font-weight:lighter;
+}
+#css-font-weight-400{
+    font-weight: 400;
+}
+#css-font-weight-500{
+    font-weight: 500;
+}
+#css-font-weight-600{
+    font-weight: 600;
+}
+#css-font-weight-700{
+    font-weight: 700;
+}
+#css-font-weight-800{
+    font-weight: 800;
+}
+#css-font-weight-900{
+    font-weight: 900;
+}
+
+#css-text-decoration-overline{
+    text-decoration: overline;
+}
+#css-text-decoration-underline{
+    text-decoration: underline;
+}
+#css-text-decoration-line-through{
+    text-decoration: line-through;
+}
+
+#css-text-shadow1{
+    text-shadow: 1px 3px 5px orangered;
+}
+#css-text-shadow2{
+    text-shadow:1px 2px 0px grey;
+}
+
+#css-color-name{
+    color:teal;
+}
+#css-color-hex{
+    color:#27bc56;
+}
+#css-color-rgb{
+    color:rgb(97, 12, 78);
+}
+
+#css-background-color-name{
+    background-color: cornflowerblue;
+}
+#css-background-color-hex{
+    background-color: #f50036;
+}
+#css-background-color-rgb{
+    background-color: rgb(70, 100, 20);
+}
+
+#css-background-image{
+    background-image: url(background-image.jpg);
+    height:200px;
+    color:white
+}
+
+#css-background-repeat-x{
+    background-image: url(icon.png);
+    height:200px;
+    background-repeat: repeat-x;
+}
+#css-background-repeat-y{
+    background-image: url(icon.png);
+    height:200px;
+    background-repeat:repeat-y;
+}
+#css-background-repeat-round{
+    background-image: url(icon.png);
+    height:200px;
+    background-repeat: round;
+}
+#css-background-repeat-no{
+    background-image: url(icon.png);
+    height:200px;
+    background-repeat:no-repeat;
+}
+
+#css-text-align-center{
+    text-align:center;
+}
+#css-text-align-justify{
+    text-align:justify;
+}
+#css-text-align-left{
+    text-align:left;
+}
+#css-text-align-right{
+    text-align:right;
+}
+
+#css-table-vertical-align{
+    border:0.1px thin;
+    height: 400px;
+    width: 300px ;
+}
+#css-vertical-align-top{
+    vertical-align: top;
+}
+#css-vertical-align-middle{
+    vertical-align: middle;
+}
+#css-vertical-align-bottom{
+    vertical-align: bottom;
+}
+#css-vertical-align-baseline{
+    vertical-align: baseline;
+}
+#css-vertical-align-sub{
+    vertical-align: sub;
+}
+#css-vertical-align-super{
+    vertical-align: super;
+}
+#css-vertical-align-pixel10{
+    vertical-align: 10px;
+}
+#css-vertical-align-pixel-10{
+    vertical-align:-10px;
+}
+
+#css-box-properties-border1{
+    border: 3px solid mediumseagreen;
+}
+#css-box-properties-border2{
+    border: 10px dotted orchid;
+}
+
+#css-box-properties-width1{
+    border: 3px solid blue;
+    width: 120px;
+}
+#css-box-properties-width2{
+    border: 3px solid blue;
+    width:30%;
+}
+#css-box-properties-height1{
+    border: 3px solid blue;
+    height: 300px;
+}
+#css-box-properties-height2{
+    border: 3px solid blue;
+    height:80%
+}
+
+#css-box-properties-padding1{
+    background-color: #f50036;
+    padding: 10px;
+}
+#css-box-properties-padding2{
+    background-color: greenyellow;
+    padding: 20px 10px;
+}
+#css-box-properties-padding3{
+    background-color: blue;
+    padding: 30px 150px 10px;
+}
+#css-box-properties-padding4{
+    background-color:orange;
+    padding: 40px 30px 20px 10px;
+}
+
+#css-box-back{
+    background-color: cornflowerblue;
+}
+#css-box-properties-margin1{
+    background-color: black;
+    color:gray;
+    border:1px solid white;
+    margin: 20px;
+}
+#css-box-properties-margin2{
+    background-color: black;
+    color:gray;
+    border:1px solid white;
+    margin: 40px 20px;
+}
+#css-box-properties-margin3{
+    background-color: black;
+    color:gray;
+    border:1px solid white;
+    margin: 60px 40px 20px;
+}
+#css-box-properties-margin4{
+    background-color: black;
+    color:gray;
+    border:1px solid white;
+    margin: 80px 60px 40px 20px;
+}
+
+#css-box-properties-display-block{
+    display: block;
+}
+#css-box-properties-display-inline{
+    display: inline;
+}
+#css-box-properties-display-none{
+    display: none;
+}
+
+#css-box-properties-overflow-visible{
+    background-color: lightcoral;
+    width: 50px;
+}
+#css-box-properties-overflow-scroll{
+    background-color: lightcoral;
+    width: 50px;
+    overflow: scroll;
+}
+#css-box-properties-overflow-hidden{
+    background-color: lightcoral;
+    width: 50px;
+    overflow: hidden;
+}
+#css-box-properties-overflow-auto{
+    background-color: lightcoral;
+    width: 50px;
+    overflow: auto;
+}
+
+#css-lista-list-style-circle{
+    list-style-type: circle;
+}
+#css-lista-list-style-square{
+    list-style-type: square;
+}
+#css-lista-list-style-decimal{
+    list-style-type: decimal;
+}
+#css-lista-list-style-disc{
+    list-style-type: disc;
+}
+#css-lista-list-style-lower-alpha{
+    list-style-type: lower-alpha;
+}
+
+#css-lista-list-style{
+    list-style: lower-alpha inside url(check.png);
+}
+
+#css-tabela-border-normal{
+    border: 3px solid black;
+    border-collapse: separate;
+}
+#css-tabela-border-collapse{
+    border: 3px solid black;
+    border-collapse: collapse;
+}
+
+#css-tabela-border-spacing1{
+    border: 3px solid black;
+    border-collapse: separate;
+    border-spacing: 40px 20px;
+}
+#css-tabela-border-spacing2{
+    border: 3px solid black;
+    border-collapse: separate;
+    border-spacing: 20px 40px;
+}
+
+#css-tabela-caption-top{
+    border: 3px solid black;
+    caption-side: top;
+}
+#css-tabela-caption-bottom{
+    border: 3px solid black;
+    caption-side: bottom;
+}
+
+#css-tabela-empty-cells-show{
+    border: 3px solid black;
+    empty-cells: show;
+}
+#css-tabela-empty-cells-show{
+    border: 3px solid black;
+    empty-cells: hide;
+}
+
+#css-tabela-table-layout-auto{
+    border: 3px solid black;
+    width:1px;
+    table-layout: auto;
+}
+#css-tabela-table-layout-fixed{
+    border: 3px solid black;
+    width:1px;
+    table-layout: fixed;
+}
+
+#css-links-states:link{
+    color:#f50036;
+}
+#css-links-states:visited{
+    color:black;
+}
+#css-links-states:hover{
+    font-size: 30px;
+    font-weight: 900;
+    color:rgb(70, 100, 20);
+}
+#css-links-states:active{
+    color:darkorchid;
+}
+
+#css-mouse-help{
+    cursor:help;
+}
+#css-mouse-crosshair{
+    cursor:crosshair;
+}
+#css-mouse-wait{
+    cursor:wait;
+}
+#css-mouse-not-allowed{
+    cursor:not-allowed;
+}
+#css-mouse-pointer{
+    cursor:pointer;
+}
+#css-mouse-progress{
+    cursor:progress;
+}
+#css-mouse-all-scroll{
+    cursor:all-scroll;
+}
+
+#css-position-static{
+    position:static;
+}
+#css-position-relative{
+    position:relative;
+    bottom:10px;
+    left:10px;
+}
+#css-position-absolute{
+    position:absolute;
+    top: 26300px;
+    right:80px;
+}
+
+#css-floating-none{
+    float:none;
+}
+#css-floating-left{
+    float:left;
+}
+#css-floating-left2{
+    width: 100px;
+    float:left;
+}
+#css-floating-right{
+    float:right;
+}
+
+#css-visibility-visible{
+    visibility: visible;
+}
+#css-visibility-hidden{
+    visibility: hidden;
+}

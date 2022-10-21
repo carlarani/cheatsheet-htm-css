@@ -1,0 +1,2102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Cheat Sheet: HTML e CSS</title>
+</head>
+<body>
+    <header>
+        <h1 id="h1">Cheat Sheet: <a href="#html">HTML</a> and <a href="#css">CSS</a></h1>
+    </header>
+    <main>
+        <!--HTML-->
+        <div id="html">
+            <h2> HTML</h2>
+            <p> HTML é constituída de tag que marcam o que cada elemento da página é. 
+                É importante aplicar tags semânticas (explicitam a função), sempre que possível.
+                Cada tag, no geral, é composta de uma tag de abertura, o conteúdo em si e uma tag de fechamento.
+            </p>
+            <img src="tagAnatomy.png" height="200px" width="auto">
+
+            <div class="sumario">
+                <ol><h3>Sumário:</h3>
+                    <li><a href="#html-estrutura">Estrutura</a></li>
+                    <li><a href="#html-texto">Texto</a></li>
+                    <li><a href="#html-texto-decor">Decoração de texto</a></li>
+                    <li><a href="#html-lista">Lista</a></li>
+                    <li><a href="#html-tabela">Tabela</a></li>
+                    <li><a href="#html-formulario">Formulário</a></li>
+                        <ul>
+                            <li><a href="#html-formulario-estrutura"> Estrutura</a></li>
+                            <li><a href="#html-formulario-elementos"> Elementos</a></li>
+                            <li><a href="#html-formulario-validacao"> Validação</a></li>
+                        </ul>
+                    <li><a href="#html-objetos">Objetos</a></li>
+                </ol>
+            </div>
+
+            <table class="main-table">
+                <thead> 
+                    <th>Tag</th>
+                    <th>Tipo</th>
+                    <th>Descrição</th>
+                    <th>Aplicação</th>
+                    <th>Visual</th>
+                </thead>
+                <tbody>
+                <!--Estrutura-->
+                <div>
+                <tr id="html-estrutura">
+                    <td>html</td>
+                    <td>Estrutura</td>
+                    <td>Inicia o arquivo html</td>
+                    <td>&lt;html&gt;html Tag&lt;/html&gt;</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>head</td>
+                    <td>Estrutura</td>
+                    <td>Metadados. Não-visível na tela. </td>
+                    <td>&lt;head&gt;Head Tag&lt;/head&gt;</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>title</td>
+                    <td>Estrutura</td>
+                    <td>Título da aba. Aninhado no head </td>
+                    <td>&lt;title&gt;title Tag&lt;/title&gt;</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>link</td>
+                    <td>Estrutura</td>
+                    <td>Link com o arquivo de CSS externo. Aninhado no head </td>
+                    <td>&lt;title&gt;title Tag&lt;/title&gt;</td>
+                    <td></td>
+                </tr>
+
+                <tr>
+                    <td>body</td>
+                    <td>Estrutura</td>
+                    <td>Contém tudo visível em tela. </td>
+                    <td>&lt;body&gt;Body Tag&lt;/body&gt;</td>
+                    <td><body></body></td>
+                </tr>
+                <tr>
+                    <td>header</td>
+                    <td>Estrutura (html semântico)</td>
+                    <td>Cabeçalho  </td>
+                    <td>&lt;header&gt;Header Tag&lt;/header&gt;</td>
+                    <td><header></header></td>
+                </tr>
+                <tr>
+                    <td>nav</td>
+                    <td>Estrutura (html semântico)</td>
+                    <td>Menu de navegação </td>
+                    <td>&lt;nav&gt;Nav Tag&lt;/nav&gt;</td>
+                    <td><nav></nav></td>
+                </tr>
+                <tr>
+                    <td>main</td>
+                    <td>Estrutura (html semântico)</td>
+                    <td>Conteúdo principal </td>
+                    <td>&lt;main&gt;Main Tag&lt;/main&gt;</td>
+                    <td><main></main></td>
+                </tr>
+                <tr>
+                    <td>section</td>
+                    <td>Estrutura (html semântico)</td>
+                    <td>Representa uma seção dentro da página </td>
+                    <td>&lt;section&gt;Section Tag&lt;/section&gt;</td>
+                    <td><section></section></td>
+                </tr>
+                <tr>
+                    <td>article</td>
+                    <td>Estrutura (html semântico)</td>
+                    <td>Representa um artigo (elemento independente) dentro da página </td>
+                    <td>&lt;article&gt;Article Tag&lt;/article&gt;</td>
+                    <td><article></article></td>
+                </tr>
+                <tr>
+                    <td>aside</td>
+                    <td>Estrutura (html semântico)</td>
+                    <td>Inclui um conteudo de apoio/adicional ao principal </td>
+                    <td>&lt;aside&gt;Aside Tag&lt;/aside&gt;</td>
+                    <td><aside></aside></td>
+                </tr>
+                <tr>
+                    <td>figure</td>
+                    <td>Estrutura (html semântico)</td>
+                    <td>Inclui um bloco que encapsula a imagem (tag img - veja abaixo) </td>
+                    <td>&lt;figure&gt;Figure Tag&lt;/figure&gt;</td>
+                    <td><figure></figure></td>
+                </tr>
+                <tr>
+                    <td>footer</td>
+                    <td>Estrutura (html semântico)</td>
+                    <td>Rodapé</td>
+                    <td>&lt;footer&gt;Footer Tag&lt;/footer&gt;</td>
+                    <td><Footer></Footer></td>
+                </tr>
+                <tr>
+                    <td>div</td>
+                    <td>Estrutura</td>
+                    <td>Container genérico </td>
+                    <td>&lt;div&gt;Div Tag&lt;/div&gt;</td>
+                    <td><div></div></td>
+                </tr>
+                <tr>
+                    <td>span</td>
+                    <td>Estrutura</td>
+                    <td>Container genérico em linha</td>
+                    <td>&lt;span&gt;Span Tag&lt;/span&gt;</td>
+                    <td><span></span></td>
+                </tr>
+            </div>
+                <!--Texto-->
+                <div>
+                <tr id="html-texto">
+                    <td>p</td>
+                    <td>Texto</td>
+                    <td>Usada para blocos de texto corrido</td>
+                    <td>&lt;p&gt;Paragraph Tag&lt;/p&gt;</td>
+                    <td><p>Paragraph</p></td>
+                </tr>
+                <tr>
+                    <td>h1</td>
+                    <td>Texto</td>
+                    <td>Usada para título principais</td>
+                    <td>&lt;h1&gt;Heading 1 Tag&lt;/h1&gt;</td>
+                    <td><h1>Heading 1 </h1></td>
+                </tr>
+                <tr>
+                    <td>h2</td>
+                    <td>Texto</td>
+                    <td>Usada para títulos hierarquia abaixo de H1</td>
+                    <td>&lt;h2&gt;Heading 2 Tag&lt;/h2&gt;</td>
+                    <td><h2>Heading 2 </h2></td>
+                </tr>
+                <tr>
+                    <td>h3</td>
+                    <td>Texto</td>
+                    <td>Usada para títulos hierarquia abaixo de H2</td>
+                    <td>&lt;h3&gt;Heading 3 Tag&lt;/h3&gt;</td>
+                    <td><h3>Heading 3 </h3></td>
+                </tr>
+                <tr>
+                    <td>h4</td>
+                    <td>Texto</td>
+                    <td>Usada para títulos hierarquia abaixo de H3</td>
+                    <td>&lt;h4&gt;Heading 4 Tag&lt;/h4&gt;</td>
+                    <td><h4>Heading 4 </h4></td>
+                </tr>
+                <tr>
+                    <td>h5</td>
+                    <td>Texto</td>
+                    <td>Usada para títulos hierarquia abaixo de H4</td>
+                    <td>&lt;h5&gt;Heading 5 Tag&lt;/h5&gt;</td>
+                    <td><h5>Heading 5 </h5></td>
+                </tr>
+                <tr>
+                    <td>h6</td>
+                    <td>Texto</td>
+                    <td>Usada para títulos hierarquia abaixo de H5</td>
+                    <td>&lt;h6&gt;Heading 6 Tag&lt;/h6&gt;</td>
+                    <td><h6>Heading 6 </h6></td>
+                </tr>
+                <tr>
+                    <td>break line</td>
+                    <td>Texto</td>
+                    <td>Usada para pular linha</td>
+                    <td>&lt;br&gt;Break Tag&lt;/br&gt;</td>
+                    <td>Texto com uma tag br aqui <br> para exemplificar a linha pulada</td>
+                </tr>
+                <tr>
+                    <td>hr</td>
+                    <td>Decoração de Texto</td>
+                    <td>Inclui linha cortando a tela (sem tag de fechamento)</td>
+                    <td>&lt;hr&gt;Hr Tag</td>
+                    <td><hr></td>
+                </tr>
+            </div>
+                <!--Decoração de texto-->
+                <div>
+                <tr id="html-texto-decor">
+                    <td>strong</td>
+                    <td>Decoração de Texto</td>
+                    <td>Destacar o texto em negrito</td>
+                    <td>&lt;strong&gt;Strong Tag&lt;/strong&gt;</td>
+                    <td><strong>Strong </strong></td>
+                </tr>
+                <tr>
+                    <td>bold</td>
+                    <td>Decoração de Texto</td>
+                    <td>Destacar o texto em negrito</td>
+                    <td>&lt;b&gt;Bold Tag&lt;/b&gt;</td>
+                    <td><b>Bold </b></td>
+                </tr>
+                <tr>
+                    <td>em</td>
+                    <td>Decoração de Texto</td>
+                    <td>Destacar o texto com itálico</td>
+                    <td>&lt;em&gt;Em Tag&lt;/em&gt;</td>
+                    <td><em>Em Tag </em></td>
+                </tr>
+                <tr>
+                    <td>italic</td>
+                    <td>Decoração de Texto</td>
+                    <td>Destacar o texto com itálico</td>
+                    <td>&lt;i&gt;Italic Tag&lt;/i&gt;</td>
+                    <td><i>Italic Tag </i></td>
+                </tr>
+                <tr>
+                    <td>underline</td>
+                    <td>Decoração de Texto</td>
+                    <td>Destacar o texto com sublinhado</td>
+                    <td>&lt;u&gt;Underline Tag&lt;/u&gt;</td>
+                    <td><u>Underline Tag </u></td>
+                </tr>
+                <tr>
+                    <td>quotation</td>
+                    <td>Decoração de Texto</td>
+                    <td>Destacar citação</td>
+                    <td>&lt;q&gt;Quotation Tag&lt;/q&gt;</td>
+                    <td><q>Quotation Tag</q></td>
+                </tr>
+                <tr>
+                    <td>s</td>
+                    <td>Decoração de Texto</td>
+                    <td>Apresenta o texto cortado   </td>
+                    <td>&lt;s&gt;Texto cortado Tag&lt;/s&gt;</td>
+                    <td><s>Texto cortado Tag</s></td>
+                </tr>
+            </div>
+                <!--Lista-->
+                <div>
+                <tr id="html-lista">
+                    <td>ul</td>
+                    <td>Lista</td>
+                    <td>Cria uma lista sem ordem </td>
+                    <td>&lt;ul&gt;Unordered List Tag&lt;/ul&gt;</td>
+                    <td><ul>Unordered List Tag</ul></td>
+                </tr>
+                <tr>
+                    <td>li</td>
+                    <td>Lista</td>
+                    <td>Cria itens em uma lista sem ordem (deve estar dentro das tags da lista)</td>
+                    <td>
+                        &lt;ul&gt;Unordered List Tag;<br>
+                        &lt;li&gt;List Item Tag&lt;/li&gt;<br>
+                        &lt;li&gt;List Item Tag&lt;/li&gt;<br>
+                        &lt;li&gt;List Item Tag&lt;/li&gt;<br>
+                        &lt;/ul&gt</td>
+                    <td><ul>Unordered List Tag
+                        <li>List Item Tag</li>
+                        <li>List Item Tag</li>
+                        <li>List Item Tag</li>
+                    </ul></td>
+                </tr>
+                <tr>
+                    <td>ol</td>
+                    <td>Lista</td>
+                    <td>Cria uma lista ordenada </td>
+                    <td>&lt;ol&gt;Ordered List Tag&lt;/ol&gt;</td>
+                    <td><ol>Ordered List Tag</ol></td>
+                </tr>
+                <tr>
+                    <td>li</td>
+                    <td>Lista</td>
+                    <td>Cria itens em uma lista ordenada (deve estar dentro das tags da lista)</td>
+                    <td>&lt;ol&gt;Ordered List Tag;<br>
+                        &lt;li&gt;List Item Tag&lt;/li&gt;<br>
+                        &lt;li&gt;List Item Tag&lt;/li&gt;<br>
+                        &lt;li&gt;List Item Tag&lt;/li&gt;<br>
+                        &lt;/ol&gt</td>
+                    <td><ol>Ordered List Tag
+                        <li>List Item Tag</li>
+                        <li>List Item Tag</li>
+                        <li>List Item Tag</li>
+                    </ol></td>
+                </tr>
+            </div>
+                <!--Tabela-->
+                <div>
+                <tr id="html-tabela">
+                    <td>table</td>
+                    <td>Tabela: estrutura</td>
+                    <td>Cria uma tabela</td>
+                    <td>&lt;table&gt;Table Tag&lt;/table&gt;</td>
+                    <td><table></table></td>
+                </tr>
+                <tr>
+                    <td>thead</td>
+                    <td>Tabela: estrutura</td>
+                    <td>Cria cabeçalho em uma tabela (deve estar aninhado na table)</td>
+                    <td>&lt;table&gt;Table Tag<br>
+                        &lt;thead&gt;Thead Tag&lt;/thead&gt;<br>
+                        &lt;/table&gt;</td>
+                    <td><table>
+                        <thead></thead>
+                    </table></td>
+                </tr>
+                <tr>
+                    <td>th</td>
+                    <td>Tabela: elementos</td>
+                    <td>Cria título para cada coluna no cabeçalho em uma tabela (deve estar aninhado na thead)</td>
+                    <td>&lt;table&gt;Table Tag<br>
+                        &lt;thead&gt;Thead Tag<br>
+                        &lt;th&gt; Th 1  &lt;/th&gt;<br>
+                        &lt;th&gt; Th 2 &lt;/th&gt;<br>
+                        &lt;th&gt; Th 3 &lt;/th&gt;<br>
+                        &lt;/thead&gt;<br>
+                        &lt;/table&gt;</td>
+                    <td><table>
+                        <thead>
+                            <th>Th 1</th>
+                            <th>Th 2</th>
+                            <th>Th 3</th>
+                        </thead>
+                    </table></td>
+                </tr>
+                <tr>
+                    <td>tbody</td>
+                    <td>Tabela: estrutura</td>
+                    <td>Cria corpo da tabela</td>
+                    <td>&lt;table&gt;Table Tag<br>
+                        &lt;thead&gt;Thead Tag<br>
+                        &lt;th&gt; Th 1  &lt;/th&gt;<br>
+                        &lt;th&gt; Th 2 &lt;/th&gt;<br>
+                        &lt;th&gt; Th 3 &lt;/th&gt;<br>
+                        &lt;/thead&gt;<br>
+                        &lt;tbody&gt;Tbody Tag&lt;/tbody&gt;<br>
+                        &lt;/table&gt;</td>
+                    <td><table>
+                        <thead>
+                            <th>Th 1</th>
+                            <th>Th 2</th>
+                            <th>Th 3</th>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table></td>
+                </tr>
+                <tr>
+                    <td>tr</td>
+                    <td>Tabela: estrutura</td>
+                    <td>Cria linha em uma tabela (deve estar aninhado na tbody)</td>
+                    <td>&lt;table&gt;Table Tag<br>
+                        &lt;thead&gt;Thead Tag<br>
+                        &lt;th&gt; Th 1  &lt;/th&gt;<br>
+                        &lt;th&gt; Th 2 &lt;/th&gt;<br>
+                        &lt;th&gt; Th 3 &lt;/th&gt;<br>
+                        &lt;/thead&gt;<br>
+                        &lt;tbody&gt;Tbody Tag<br>
+                        &lt;tr&gt; &lt;/tr&gt;<br>
+                        &lt;tr&gt; &lt;/tr&gt;<br>     
+                        &lt;/tbody&gt;<br>
+                        &lt;/table&gt;</td>
+                    <td><table>
+                        <thead>
+                            <th>Th 1</th>
+                            <th>Th 2</th>
+                            <th>Th 3</th>
+                        </thead>
+                        <tbody>
+                            <tr></tr>
+                            <tr></tr>
+                        </tbody>
+                    </table></td>
+                </tr>
+                <tr>
+                    <td>td</td>
+                    <td>Tabela: elemento</td>
+                    <td>Adiciona dados a uma celula em uma linha de uma tabela (deve estar aninhado na tr)<br>
+                        Atributo colspan (na tag td - exemplo em Td 2.2) permite estender um conteúdo a mais de uma coluna. </td>
+                    <td>&lt;table&gt;Table Tag<br>
+                        &lt;thead&gt;Thead Tag<br>
+                        &lt;th&gt; Th 1  &lt;/th&gt;<br>
+                        &lt;th&gt; Th 2 &lt;/th&gt;<br>
+                        &lt;th&gt; Th 3 &lt;/th&gt;<br>
+                        &lt;/thead&gt;<br>
+                        &lt;tbody&gt;Tbody Tag<br>
+                        &lt;tr&gt; <br>
+                        &lt;td&gt; Td 1.1  &lt;/td&gt;<br>
+                        &lt;td&gt; Td 1.2  &lt;/td&gt;<br>
+                        &lt;td&gt; Td 1.3  &lt;/td&gt;<br>
+                        &lt;/tr&gt;<br>
+                        &lt;tr&gt; <br>
+                        &lt;td&gt; Td 2.1  &lt;/td&gt;<br>
+                        &lt;td  colspan="2"&gt; Td 2.2  &lt;/td&gt;<br>
+                        &lt;/tr&gt;<br>     
+                        &lt;/tbody&gt;<br>
+                        &lt;/table&gt;</td>
+                    <td><table class="example-table">
+                        <thead>
+                            <th>Th 1</th>
+                            <th>Th 2</th>
+                            <th>Th 3</th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="example-td">Td 1.1</td>
+                                <td class="example-td">Td 1.2</td>
+                                <td class="example-td">Td 1.3</td>
+                            </tr>
+                            <tr>
+                                <td class="example-td">Td 2.1</td>
+                                <td class="example-td" colspan="2">Td 2.2</td>
+                            </tr>
+                        </tbody>
+                    </table></td>
+                </tr>
+            </div>
+                <!--Formulário-->
+                <div>
+                    <tr id="html-formulario">
+                        <td id="html-formulario-estrutura">form</td>
+                        <td>Formulário: estrutura</td>
+                        <td>Cria um formulário</td>
+                        <td>&lt;form action="url" method="GET/POST"&gt;Form Tag&lt;/form&gt;</td>
+                        <td><form action="/pratice.html" method="POST">Form Tag</form></td>
+                    </tr>
+                    <tr>
+                        <td id="html-formulario-elementos"> input text </td>
+                        <td>Formulário: elementos</td>
+                        <td>Cria uma entrada para texto no formulário. Sem tag de fechamento.</td>
+                        <td>&lt;form action="url" method="GET/POST"&gt;<br>
+                            Form Tag<br>
+                            &lt;input type="text" name="name" value="Abcdef"&gt;<br>
+                            &lt;/form&gt;</td>
+                            <td><form action="" method="GET">Form Tag<br>
+                                <input type="text" name="name" value="Abcdef">
+                            </form></td>
+                        </tr>
+                        <tr>
+                            <td>label </td>
+                            <td>Formulário: elementos</td>
+                            <td>Apresenta um nome para o usuário associado a um elemento input no formulário</td>
+                            <td>&lt;form action="url" method="GET/POST"&gt;<br>
+                                Form Tag<br>
+                                &lt;label for="name"&gt;Nome: &lt;/label&gt;<br>
+                                &lt;input type="text" id="name" name="nome" placeholder="Abc Def Ghi"&gt;<br>
+                                &lt;/form&gt;</td>
+                            <td><form action="" method="GET">Form Tag<br>
+                                <label for="name">Nome: </label>
+                                <input type="text" id="name" name="nome" placeholder="Abc Def Ghi">
+                            </form></td>
+                        </tr>
+                        <tr>
+                            <td>input password </td>
+                            <td>Formulário: elementos</td>
+                            <td>Cria uma entrada para senha no formulário.</td>
+                            <td>&lt;form action="url" method="GET/POST"&gt;<br>
+                                Form Tag<br>
+                                &lt;label for="password"&gt;Senha: &lt;/label&gt;<br>
+                                &lt;input type="password" id="password" name="senha"&gt;<br>
+                                &lt;/form&gt;</td>
+                            <td><form action="" method="GET">Form Tag<br>
+                                <label for="password">Senha: </label>
+                                <input type="password" id="password" name="senha">
+                            </form></td>
+                        </tr>
+                        <tr>
+                            <td>input number </td>
+                            <td>Formulário: elementos</td>
+                            <td>Cria uma entrada para números no formulário.</td>
+                            <td>&lt;form action="url" method="GET/POST"&gt;<br>
+                                Form Tag<br>
+                                &lt;label for="age">Idade: &lt;/label&gt;<br>
+                                &lt;input type="number" id="age" name="idade" step="1" min="18"&gt;<br>
+                                &lt;/form&gt;</td>
+                            <td><form action="" method="GET">Form Tag<br>
+                                <label for="age">Idade: </label>
+                                <input type="number" id="age" name="idade" step="1" min="18">                                
+                            </form></td>
+                        </tr>
+                        <tr>
+                            <td>input range </td>
+                            <td>Formulário: elementos</td>
+                            <td>Cria uma entrada de seleção em um range pre determinado no formulário.</td>
+                            <td>&lt;form action="url" method="GET/POST"&gt;<br>
+                                Form Tag<br>
+                                &lt;label for="satisfaction"&gt;Como avalia o serviço?&lt;/label&gt;<br>
+                                &lt;br&gt;<br>
+                                &lt;span&gt;Bom &lt;/span&gt;<br>
+                                &lt;input type="range" id="satisfaction" name="satisfacao" min="0" max="2" step="1"&gt;<br>
+                                &lt;span&gt;Ruim &lt;/span&gt; <br>
+                                &lt;/form&gt;</td>
+                            <td><form action="" method="GET">Form Tag<br>
+                                <label for="satisfaction">Como avalia o serviço?</label>
+                                <br>
+                                <span>Bom </span>
+                                <input type="range" id="satisfaction" name="satisfacao" min="0" max="2" step="1">
+                                <span>Ruim </span>                                 
+                            </form></td>
+                        </tr>
+                        <tr>
+                            <td>input checkbox </td>
+                            <td>Formulário: elementos</td>
+                            <td>Cria uma entrada para múltipla seleção no formulário. Neste caso, cada item selecionável é um elemento input.</td>
+                            <td>&lt;form action="url" method="GET/POST"&gt;<br>
+                                Form Tag<br>
+                                &lt;p&gt;Selecione temas de seu interesse&lt;/p&gt;<br>
+                                &lt;input type="checkbox" id="meio-ambiente" name="temas"&gt;<br>
+                                &lt;label for="meio-ambiente"&gt;Meio Ambiente&lt;/label&gt;<br>
+                                &lt;input type="checkbox" id="politica" name="temas"&gt;<br>
+                                &lt;label for="educacao"&gt;Educação&lt;/label&gt;<br>
+                                &lt;input type="checkbox" id="educacao" name="temas"&gt;<br>
+                                &lt;label for="saude"&gt;Saúde&lt;/label&gt;<br>
+                                &lt;input type="checkbox" id="saude" name="temas"&gt;<br>
+                                &lt;label for="politica"&gt;Política&lt;/label&gt;<br> 
+
+                                &lt;/form&gt;</td>
+                            <td><form action="" method="GET">Form Tag<br>
+                                <p>Selecione temas de seu interesse</p>
+                                <input type="checkbox" id="meio-ambiente" name="temas">
+                                <label for="meio-ambiente">Meio Ambiente</label>  
+                                <input type="checkbox" id="politica" name="temas">
+                                <label for="educacao">Educação</label>  
+                                <br>
+                                <input type="checkbox" id="educacao" name="temas">
+                                <label for="saude">Saúde</label>  
+                                <input type="checkbox" id="saude" name="temas">
+                                <label for="politica">Política</label>  
+                            </form></td>
+                        </tr>
+                        <tr>
+                            <td>input radio </td>
+                            <td>Formulário: elementos</td>
+                            <td>Cria uma entrada para seleção única no formulário. Neste caso, cada item selecionável é um elemento input, porém levam o mesmo name, o que limita a seleção a apenas uma opção.</td>
+                            <td>&lt;form action="url" method="GET/POST"&gt;<br>
+                                Form Tag<br>
+                                &lt;p&gt;Qual sua nacionalidade?&lt;/p&gt;<br> 
+                                &lt;input type="radio" id="brasileiro" name="nacionalidade" value="brasileiro"&gt;<br> 
+                                &lt;label for="brasileiro"&gt;Brasileiro&lt;/label&gt;<br> 
+                                &lt;input type="radio" id="outro" name="nacionalidade" value="brasileiro"&gt;<br> 
+                                &lt;label for="outro"&gt;Outro&lt;/label&gt;<br> 
+                                &lt;/form&gt;</td>
+                            <td><form action="" method="GET">Form Tag<br>
+                                <p>Qual sua nacionalidade?</p>
+                                <input type="radio" id="brasileiro" name="nacionalidade" value="brasileiro">
+                                <label for="brasileiro">Brasileiro</label>
+                                <input type="radio" id="outro" name="nacionalidade" value="brasileiro">
+                                <label for="outro">Outro</label>
+
+                            </form></td>
+                        </tr>
+
+                        <tr>
+                            <td>select dropdown list </td>
+                            <td>Formulário: elementos</td>
+                            <td>Cria uma entrada para seleção única no formulário dada uma lista de opções.</td>
+                            <td>&lt;form action="url" method="GET/POST"&gt;<br>
+                                Form Tag<br>
+                                &lt;label for="favorite-food"&gt;Qual sua comida favorita?&lt;/label&gt;<br>
+                                &lt;select id="favorite-food" name="comida-favorita"&gt;<br>
+                                &lt;option value="pizza"&gt;Pizza&lt;/option&gt;<br>
+                                &lt;option value="hamburguer"&gt;Hamburguer&lt;/option&gt;<br>
+                                &lt;option value="salada"&gt;Salada&lt;/option&gt;<br>
+                                &lt;option value="miojo"&gt;Miojo&lt;/option&gt;<br>
+                                &lt;option value="tacos"&gt;Tacos&lt;/option&gt;<br>
+                                &lt;/select&gt;<br>
+                                &lt;/form&gt;</td>
+                            <td><form action="" method="GET">Form Tag<br>
+                                <label for="favorite-food">Qual sua comida favorita?</label>
+                                <select id="favorite-food" name="comida-favorita">
+                                  <option value="pizza">Pizza</option>
+                                  <option value="hamburguer">Hamburguer</option>
+                                  <option value="salada">Salada</option>
+                                  <option value="miojo">Miojo</option>
+                                  <option value="tacos">Tacos</option>
+                                </select>
+                            </form></td>
+                        </tr>
+                        <tr>
+                            <td>input text com datalist </td>
+                            <td>Formulário: elementos</td>
+                            <td>Cria uma entrada para descrição única no formulário dada uma lista de opções (usada para listas grandes que scroll seria ruim)</td>
+                            <td>&lt;form action="url" method="GET/POST"&gt;<br>
+                                Form Tag<br>
+                                &lt;label for="city"&gt;Próxima viagem: &lt;/label&gt;<br>
+                                &lt;input type="text" list="cities" id="city" name="cidade"&gt;<br>
+                                &lt;datalist id="cities"&gt;<br>
+                                &lt;option value="New York City"&gt;&lt;/option&gt;<br>
+                                &lt;option value="Tokyo"&gt;&lt;/option&gt;<br>
+                                &lt;option value="Barcelona"&gt;&lt;/option&gt;<br>
+                                &lt;option value="Mexico City"&gt;&lt;/option&gt;<br>
+                                &lt;option value="Melbourne"&gt;&lt;/option&gt;<br>
+                                &lt;option value="Other"&gt;&lt;/option&gt;<br>
+                                &lt;/datalist&gt;<br>
+
+                                &lt;/form&gt;</td>
+                            <td><form action="" method="GET">Form Tag<br>
+                                <label for="city">Próxima viagem: </label>
+                                <input type="text" list="cities" id="city" name="cidade">
+                                <datalist id="cities">
+                                <option value="New York City"></option>
+                                <option value="Tokyo"></option>
+                                <option value="Barcelona"></option>
+                                <option value="Mexico City"></option>
+                                <option value="Melbourne"></option>
+                                <option value="Other"></option>  
+                                </datalist>
+                            </form></td>
+                        </tr>
+
+                        <tr>
+                            <td>textarea </td>
+                            <td>Formulário: elementos</td>
+                            <td>Cria uma entrada para textos maiores</td>
+                            <td>&lt;form action="url" method="GET/POST"&gt;<br>
+                                Form Tag<br>
+                               &lt;label for="comment"&gt;Comentários adicionais: &lt;/label&gt;<br>
+                                &lt;br&gt;<br>
+                                &lt;textarea id="comment" name="comentario" rows="5" cols="30"&gt;<br>
+                                &lt;/textarea&gt;<br>
+
+                                &lt;/form&gt;</td>
+                            <td><form action="" method="GET">Form Tag<br>
+                                <label for="comment">Comentários adicionais: </label>
+                                <br>
+                                <textarea id="comment" name="comentario" rows="5" cols="30">
+                                </textarea>
+                            </form></td>
+                        </tr>
+
+                        <tr>
+                            <td>input tel </td>
+                            <td>Formulário: elementos</td>
+                            <td> Entrada para telefone. Abre teclado numerico em celular.</td>
+                            <td>&lt;form action="url" method="GET/POST"&gt;<br>
+                                Form Tag<br>
+                                &lt;label for="tel">Telefone :&lt;/label&gt;<br>
+                                &lt;input type="tel" id="tel" name="telefone" placeholder="000000000"&gt;<br>
+                                &lt;/form&gt;</td>
+                            <td><form action="submit.html" method="POST">Form Tag<br>
+                                <label for="tel">Telefone :</label>
+                                <input type="tel" id="tel" name="telefone" placeholder="000000000">
+                            </form></td>
+                        </tr>
+
+                        <tr>
+                            <td>input email </td>
+                            <td>Formulário: elementos</td>
+                            <td> Entrada para email. Valida se tem @. </td>
+                            <td>&lt;form action="url" method="GET/POST"&gt;<br>
+                                Form Tag<br>
+                                &lt;label for="email">Email :&lt;/label&gt;<br>
+                                &lt;input type="email" id="email" name="email" placeholder="email@email.com"&gt;<br>
+                                &lt;/form&gt;</td>
+                            <td><form action="submit.html" method="POST">Form Tag<br>
+                                <label for="email">Email :</label>
+                                <input type="email" id="email" name="email" placeholder="email@email.com">
+                            </form></td>
+                        </tr>
+
+                        <tr>
+                            <td>input url </td>
+                            <td>Formulário: elementos</td>
+                            <td> Entrada para url. Checa se há padrão http ou https </td>
+                            <td>&lt;form action="url" method="GET/POST"&gt;<br>
+                                Form Tag<br>
+                                &lt;label for="email">Email :&lt;/label&gt;<br>
+                                &lt;input type="email" id="email" name="email" placeholder="email@email.com"&gt;<br>
+                                &lt;/form&gt;</td>
+                            <td><form action="submit.html" method="POST">Form Tag<br>
+                                <label for="url">URL:</label>
+                                <input type="url" id="url" name="url" placeholder="url.com">
+                            </form></td>
+                        </tr>
+
+                        <tr>
+                            <td>input search </td>
+                            <td>Formulário: elementos</td>
+                            <td>Cria um botão para pesquisa. <br>
+                                Pode digitar e até add datalist.<br>
+                                Envio do form apertando enter.
+                            </td>
+                            <td>&lt;form action="url" method="GET/POST"&gt;<br>
+                                Form Tag<br>
+                                &lt;input type="search" name="pesquisa"&gt;<br>x
+                                &lt;/form&gt;</td>
+                            <td><form action="submit.html" method="POST">Form Tag<br>
+                                <input type="search" name="pesquisa">
+                            </form></td>
+                        </tr>
+
+                        <tr>
+                            <td>input submit </td>
+                            <td>Formulário: elementos</td>
+                            <td>Cria um botão para submeter o conteúdo preenchido (enviar para a url do form).</td>
+                            <td>&lt;form action="url" method="GET/POST"&gt;<br>
+                                Form Tag<br>
+                                &lt;label for="name"&gt;Nome: &lt;/label&gt;<br>
+                                &lt;input type="text" id="name" name="nome" value="Abcdef"&gt;<br>
+                                &lt;br&gt;<br>
+                                &lt;label for="password"&gt;Senha: &lt;/label&gt;<br>
+                                &lt;input type="password" id="password" name="senha"&gt;<br>
+                                &lt;br&gt;<br>
+                                &lt;input type="submit" value="Enviar"&gt;<br>
+
+                                &lt;/form&gt;</td>
+                            <td><form action="submit.html" method="POST">Form Tag<br>
+                                <label for="name">Nome: </label>
+                                <input type="text" id="name" name="nome" value="Abcdef">
+                                <br>
+                                <label for="password">Senha: </label>
+                                <input type="password" id="password" name="senha">
+                                <br>
+                                <input type="submit" value="Enviar">
+                            </form></td>
+                        </tr>
+
+                        <tr>
+                            <td id="html-formulario-validacao">required attribute</td>
+                            <td>Formulário: validação</td>
+                            <td>Campos de preenchimento obrigatório</td>
+                            <td>&lt;form action="url" method="GET/POST"&gt;<br>
+                                Form Tag<br>
+                                &lt;label for="name"&gt;Nome: &lt;/label&gt;<br>
+                                &lt;input type="text" id="name" name="nome" required&gt;<br>
+                                &lt;br&gt;<br>
+                                &lt;input type="submit" value="Enviar"&gt;<br>
+                                &lt;/form&gt;
+                            </td>
+                            <td><form action="submit.html" method="POST">Form Tag<br>
+                                <label for="name">Nome: </label>
+                                <input type="text" id="name" name="nome" required>
+                                <br>
+                                <input type="submit" value="Enviar">
+                            </form></td>
+                        </tr>
+
+                        <tr>
+                            <td>max and min values </td>
+                            <td>Formulário: validação</td>
+                            <td>Designa valores maximos e minimos para campos de texto e numéricos</td>
+                            <td>&lt;form action="url" method="GET/POST"&gt;<br>
+                                Form Tag<br>
+                                &lt;label for="age"&gt;Idade: &lt;/label&gt;<br>
+                                &lt;input type="number" id="age" name="idade" step="1" min="18" max="150"&gt;<br>
+                                &lt;input type="submit" value="Enviar"&gt;<br>
+                                &lt;/form&gt;</td>
+                            <td><form action="submit.html" method="POST">Form Tag<br>
+                                <label for="age">Idade: </label>
+                                <input type="number" id="age" name="idade" step="1" min="18" max="150">
+                                <input type="submit" value="Enviar">
+                            </form></td>
+                        </tr>
+
+                        <tr>
+                            <td>match pattern </td>
+                            <td>Formulário: validação</td>
+                            <td>Checa se os valores de entrada do usuário estão de acordo com o padrão esperado</td>
+                            <td>&lt;form action="url" method="GET/POST"&gt;<br>
+                                Form Tag<br>
+                                &lt;label for="id"&gt;CPF(somente números): &lt;/label&gt;<br>
+                                &lt;input type="text" id="id" name="cpf" required pattern="[0-9]{11}"&gt;<br>
+                                &lt;input type="submit" value="Enviar"&gt;<br>
+                                &lt;/form&gt;</td>
+                            <td><form action="submit.html" method="POST">Form Tag<br>
+                                <label for="id">CPF(somente números): </label>
+                                <input type="text" id="id" name="cpf" required pattern="[0-9]{11}">
+                                <input type="submit" value="Enviar">
+                            </form></td>
+                        </tr>
+
+                </div>
+                <!--Objetos-->
+                <div>
+                <tr id="html-objetos">
+                    <td>a</td>
+                    <td>Objetos</td>
+                    <td>Incluir texto com direcionamento para link.<br>
+                    Atributo target="_blank" irá abrir o link em nova aba ou nova página.</td>
+                    <td>&lt;a href="url"&gt;Anchor Tag&lt;/a&gt;</td>
+                    <td><a href="http://www.google.com">Anchor Tag: Google</a></td>
+                </tr>
+                <tr>
+                    <td>a</td>
+                    <td>Objetos</td>
+                    <td>Incluir texto com direcionamento para div na página</td>
+                    <td>&lt;a href=""#id-of-element-to-link-to""&gt;Anchor Tag by ID&lt;/a&gt;</td>
+                    <td><a href="#h1">Anchor Tag to H1</a></td>
+                </tr>
+                <tr>
+                    <td>img</td>
+                    <td>Objetos</td>
+                    <td>Incluir imagem. <br>
+                        Atributos para fonte da imagem, texto alternativo e tamanho(px ou %).<br>
+                        Sem tag de fechamento</td>
+                    <td>&lt;img src="url" alt="texto alternativo acessibilidade" width="100px" height="auto" &gt;Img Tag</td>
+                    <td><img src="icon.png" alt="texto alternativo acessibilidade" width="100px" height="auto"></td>
+                </tr>
+                <tr>
+                    <td>figcaption</td>
+                    <td>Objetos</td>
+                    <td>Inclui legenda a uma imagem (aninhado em figure) </td>
+                    <td>&lt;figure><br>
+                        &lt;img src="icon.png" alt="texto alternativo acessibilidade"><br>
+                        &lt;figcaption>Figcaption Tag&lt;/figcaption><br>
+                        &lt;/figure></td>
+                    <td><figure>
+                        <img src="icon.png" alt="texto alternativo acessibilidade">
+                        <figcaption>Figura 1. Figcaption Tag</figcaption>
+                    </figure></td>
+                </tr>
+                <tr>
+                    <td>video</td>
+                    <td>Objetos</td>
+                    <td>Incluir video.<br>
+                    Atributos de fonte do arquivo ou url, tamanho e control para adicionar os botões de controle no arquivo.<br>
+                    Tanto no audio quanto no video, pode ser usado atributo src ou tag source para add o elemento.  </td>
+                    <td>&lt;video src="video.mp4" width="200px" height="auto" controls &gt;Video Tag (texto a ser exibido caso o video não carregue)&lt;/video</td>
+                    <td><video src="video.mp4" width="200px" height="auto" controls>Desculpa, o seu navegador não suporta vídeos incorporados</video>
+                    </td>
+                </tr>
+                <tr>
+                    <td>audio</td>
+                    <td>Objetos</td>
+                    <td>Incluir audio.<br>
+                    Atributo controls adiciona a ferramenta de controle de play e volume do arquivo de audio.<br>
+                    Tanto no audio quanto no video, pode ser usado atributo src ou tag source para add o elemento. </td>
+                    <td>&lt;audio controls&gt;<br>
+                        &lt;source src="audio.mp3" type="audio/mp3"&gt;<br>
+                        &lt;/audio&gt;</td>
+                    <td>
+                        <audio controls>
+                            <source src="audio.mp3" type="audio/mp3">
+                        </audio>
+                    </td>
+                </tr>
+                <tr>
+                    <td>code</td>
+                    <td>Objetos</td>
+                    <td>Incluir codigo destacado do texto</td>
+                    <td>&lt;code&gt;Code Tag 
+                        var a = 10;<br>
+                        var b = 1;<br>
+                        Console.WriteLine(a + b);
+                        &lt;/code&gt;</td>
+                    <td><code>
+                        var a = 10;<br>
+                        var b = 1;<br>
+                        Console.WriteLine(a + b);
+                    </code>
+                    </td>
+                </tr>
+                <tr>
+                    <td>progress</td>
+                    <td>Objetos</td>
+                    <td>Incluir barra de progresso que pode ser atrelado a JavaScript</td>
+                    <td>&lt;progress min="0" max="100" value="13"&gt;<br>
+                        &lt;/progress&gt;</td>
+                    <td><progress min="0" max="100" value="13">
+                    </progress>
+                    </td>
+                </tr>
+                <tr>
+                    <td>svg</td>
+                    <td>Objetos</td>
+                    <td>Desenha figuras geometricas na tela.<br>
+                    </td>
+                    <td>&lt;svg width="300" height="300"&gt;<br>
+                        &lt;rect width="45" height="90" x="10" y="10" fill="green"&gt;<br>
+                        &lt;animate attributeName="x" from="0" to="100" dur="3s" fill="freeze" repeatCount="indefinite"/&gt;<br>
+                        &lt;/rect&gt;<br>
+                        &lt;circle cx="145" cy="145" r="10" fill="purple" /&gt;<br>
+                        &lt;line x1="150" y1="40" x2="210" y2="75" style="stroke:coral; stroke-linecap:round; stroke-width:20px;"/&gt;<br>
+                        &lt;polyline style="stroke:lawngreen; stroke-linejoin:miter; stroke-width:20px;" fill="none" points="100 150, 180 200, 300 100"  /&gt;<br>
+                        &lt;ellipse cx="45" cy="245" rx="20" ry="50" fill="blue" /&gt;<br>
+                        &lt;polygon points="200 270, 270 210, 300 300" style="fill: gray; stroke:black"/><br>
+                        &lt;/svg&gt;<br>
+                    </td>
+                    <td><svg width="300" height="300">
+                        <rect width="45" height="90" x="10" y="10" fill="green">
+                            <animate attributeName="x" from="0" to="100" dur="3s" fill="freeze" repeatCount="indefinite"/>
+                        </rect>
+                        <circle cx="145" cy="145" r="10" fill="purple"/>
+                        <line x1="150" y1="40" x2="210" y2="75" style="stroke:coral; stroke-linecap:round; stroke-width:20px;"/>
+                        <polyline style="stroke:lawngreen; stroke-linejoin:miter; stroke-width:20px;" fill="none" points="100 150, 180 200, 300 100"  />
+                        <ellipse cx="45" cy="245" rx="20" ry="50" fill="blue" />
+                        <polygon points="200 270, 270 210, 300 300" style="fill: gray; stroke:black"/>
+                     </svg>
+                    </td>
+                </tr>       
+
+            </div>
+        </tbody>
+        </table>
+        </div>
+        <hr>
+        <!--CSS-->
+        <div id="css">
+            <h2> CSS</h2>
+            <p> CSS é cascateamento de marcações de estilo. Pode ser feito com base em tags, classes ou ids.  <br>
+                CSS pode ser descrito inline no próprio arquivo html (não recomendado) através do atributo style diretamente nas tags, ou até em um bloco prórpio na tag style dentro do <head class=""></head>
+                A alternativa mais recomendada, entretanto, é manter o arquivo de estilo completamente separado do conteúdo. 
+                Sendo assim, o CSS vai em um rquivo proprio e deve ser conectado ao arquivo html através da tag link no head.<br>
+                <br>
+                <code>
+                    &lt;html&gt;<br>
+                    &lt;head&gt;<br>
+                    &lt;link rel="stylesheet" href="styles.css"&gt;<br>
+                    &lt;/head&gt;
+                    &lt;/html&gt;
+                </code>
+            </p>
+
+            <img src="tagAnatomyCSS.png" height="200px" width="auto">
+
+            <div class="sumario">
+                <ol><h3>Sumário:</h3>
+                    <li><a href="#css-estrutura">Estrutura</a></li>
+                    <li><a href="#css-texto">Texto</a></li>
+                        <ul>    
+                            <li><a href="#css-texto-formatacao"> Formatação</a></li>
+                            <li><a href="#css-texto-espacamento"> Espaçamento</a></li>
+                            <li><a href="#css-texto-decoracao"> Decoração</a></li>
+                        </ul>
+                    <li><a href="#css-cor">Cor e Background</a></li>
+                    <li><a href="#css-alinhamento">Alinhamento</a></li>
+                    <li><a href="#css-box-properties">Box properties</a></li>
+                    <img src="boxModelCSS.png">
+                    <li><a href="#css-lista">Lista</a></li>
+                    <li><a href="#css-tabela">Tabela</a></li>
+                    <li><a href="#css-links">Links</a></li>
+                    <li><a href="#css-mouse">Mouse cursor</a></li>
+                    <li><a href="#css-posicionamento_visibilidade">Posicionamento e visibilidade</a></li>
+
+                </ol>
+            </div>
+
+            <table class="main-table">
+                <thead>
+                    <th>Propriedades</th>
+                    <th>Tipo</th>
+                    <th>Descrição</th>
+                    <th>Aplicação</th>
+                    <th class="visual-col">Visual</th>
+                </thead>
+                <tbody>
+                    <!--Estrutura-->
+                    <div>
+                        <tr id="css-estrutura">
+                            <td>tags</td>
+                            <td>Estrutura: seletores</td>
+                            <td>Inclui dados de estilo para todas as tags do html</td>
+                            <td>body {<br>
+                                color: gray;<br>
+                                }</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>classes</td>
+                            <td>Estrutura: seletores</td>
+                            <td>Inclui dados de estilo para todas as tags que pertencem a determinada classe do html</td>
+                            <td>.main-table {<br>
+                                color: gray;<br>
+                                }</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>ids</td>
+                            <td>Estrutura: seletores</td>
+                            <td>Inclui dados de estilo para a tag que pertence ao id especificado no html</td>
+                            <td>#css-estrutura {<br>
+                                color: gray;<br>
+                                }</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>combinados</td>
+                            <td>Estrutura: seletores</td>
+                            <td>Inclui seleção múltipla para determinado estilo.
+                                No exemplo, irá receber o valor apenas os elementos de id="css-estrutura" e que pertençam a classe="main-table" e que sejam elementos paragraph.</p></td>
+                            <td>#css-estrutura .main-table p {<br>
+                                color: gray;<br>
+                                }</td>
+                            <td></td>
+                        </tr>
+                    </div>
+                    <!--Texto-->
+                    <div>
+                        <div>
+                            <tr id="css-texto-formatação">
+                                <td>font-family</td>
+                                <td>Texto: formatação</td>
+                                <td>Define a fonte a ser usada. É uma boa prática incluir a fonte desejada e pelo menos uma família genérica a ser usada caso a fonte não esteja disponível. <br>
+                                    Quando o nome da fonte tiver mais de uma palavra, deve ser escrito entre aspas.
+                                <td>#css-font-family{<br>
+                                    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;<br>
+                                }</td>
+                                <td id="css-font-family">Font-Family</td>
+                            </tr>
+                            <tr>
+                                <td>font-size</td>
+                                <td>Texto: formatação</td>
+                                <td>Define o tamanho da letra.<br>
+                                    Pode ser por categoria: small, large...<br>
+                                    Ou por tamanho em px ou em (em = pixels / 16).
+                                </td>
+                                <td>#css-font-size24{<br>
+                                    font-size:24px;<br>
+                                }</td>
+                                <td><p id="css-font-size12">Font-size 12</p>
+                                    <p id="css-font-size24">Font-size 24</p>
+                                    <p id="css-font-size48">Font-size 48</p>
+                                    <p id="css-font-size-small">Font-size Small</p>
+                                    <p id="css-font-size-medium">Font-size Medium</p>
+                                    <p id="css-font-size-xx-large">Font-size XX-large</p>
+                                </td>
+                            </tr>
+    
+                            <tr>
+                                <td>font-variant</td>
+                                <td>Texto: formatação</td>
+                                <td>Passa letras minúsculas para letras maiúsculas pequenas (small-caps).
+                                </td>
+                                <td>#css-font-variant-small-caps{<br>
+                                    font-variant: small-caps;<br>
+                                }</td>
+                                <td>
+                                    <p> TEXTO normal</p>
+                                    <p id="css-font-variant-small-caps"> TEXTO small-caps</p>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>text-tranform</td>
+                                <td>Texto: formatação</td>
+                                <td>Altera letras maiúsculas e minúsculas<br>
+                                    Pode ser: capitalize (primeiras letras de palavras maiúsculas), uppercase ou lowercase.
+                                </td>
+                                <td>#css-text-transform-capitalize{<br>
+                                    text-transform: capitalize;<br>
+                                }<br>
+                                #css-text-transform-uppercase{<br>
+                                    text-transform: uppercase;<br>
+                                }<br>
+                                #css-text-transform-lowercase{<br>
+                                    text-transform:lowercase;<br>
+                                }</td>
+                                <td>
+                                    <p> TEXTO normal</p>
+                                    <p id="css-text-transform-capitalize"> TEXTO capitalize</p>
+                                    <p id="css-text-transform-uppercase"> TEXTO uppercase</p>
+                                    <p id="css-text-transform-lowercase"> TEXTO lowercase</p>
+                                </td>
+                            </tr>
+                        </div>
+                        <div>
+                            <tr id="css-texto-espacamento">
+                                <td>text-indent</td>
+                                <td>Texto: espaçamento</td>
+                                <td>Adiciona espaçamento no início do parágrafo</td>
+                                <td>#css-text-indent{<br>
+                                    text-indent: 60px;<br>
+                                    }</td>
+                                <td>
+                                    <p id="css-text-indent"> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>letter-spacing</td>
+                                <td>Texto: espaçamento</td>
+                                <td>Adiciona espaçamento entre letras</td>
+                                <td>#css-letter-spacing1{<br>
+                                    letter-spacing: 5px;<br>
+                                    }<br>
+                                    #css-letter-spacing2{<br>
+                                    letter-spacing: 10px;<br>
+                                    }
+                                    #css-letter-spacing3{<br>
+                                    letter-spacing: -3px;<br>
+                                    }
+                                </td>
+                                <td>
+                                    <p>TEXTO normal</p>
+                                    <p id="css-letter-spacing1"> TEXTO letter spacing 1 </p>
+                                    <p id="css-letter-spacing2"> TEXTO letter spacing 2 </p>
+                                    <p id="css-letter-spacing3"> TEXTO letter spacing 3 </p>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>word-spacing</td>
+                                <td>Texto: espaçamento</td>
+                                <td>Adiciona espaçamento entre palavras</td>
+                                <td>#css-word-spacing1{<br>
+                                    word-spacing: 30px;<br>
+                                }<br>
+                                #css-word-spacing2{<br>
+                                    word-spacing: 80px;<br>
+                                }<br>
+                                #css-word-spacing3{<br>
+                                    word-spacing: -10px;<br>
+                                }
+                                </td>
+                                <td>
+                                    <p>TEXTO normal</p>
+                                    <p id="css-word-spacing1"> TEXTO word spacing 1 </p>
+                                    <p id="css-word-spacing2"> TEXTO word spacing 2 </p>
+                                    <p id="css-word-spacing3"> TEXTO word spacing 3 </p>
+                                </td>
+                            </tr>
+
+                            </div>
+                        <div>
+
+                            <tr id="css-texto-decoracao">
+                                <td>font-style</td>
+                                <td>Texto: decoração</td>
+                                <td>Define decorações de texto<br>
+                                    Pode ser: italic, normal, oblique.
+                                </td>
+                                <td>#css-font-style-italic{<br>
+                                    font-style: italic;<br>
+                                }</td>
+                                <td><p id="css-font-style-italic">Font-style italic</p>
+                                    <p id="css-font-style-normal">Font-style normal</p>
+                                    <p id="css-font-style-oblique">Font-style oblique</p>
+                                </td>
+                            </tr>
+        
+                            <tr>
+                                <td>font-weight</td>
+                                <td>Texto: decoração</td>
+                                <td>Define decorações de texto<br>
+                                    Pode ser: normal, bold, bolder, ou lighter.<br>
+                                    Ou poder ser determinada por valores, de 100 a 900 (sendo 400=normal).<br>
+                                </td>
+                                <td>#css-font-weight-bold{<br>
+                                    font-weight: bold;<br>
+                                }</td>
+                                <td><p id="css-font-weight-bold">Font-weigth bold</p>
+                                    <p id="css-font-weight-bolder">Font-weigth bolder</p>
+                                    <p id="css-font-weight-lighter">Font-weigth lighter</p>
+                                    <p id="css-font-weight-400">Font-weigth 400</p>
+                                    <p id="css-font-weight-500">Font-weigth 500</p>
+                                    <p id="css-font-weight-600">Font-weigth 600</p>
+                                    <p id="css-font-weight-700">Font-weigth 700</p>
+                                    <p id="css-font-weight-800">Font-weigth 800</p>
+                                    <p id="css-font-weight-900">Font-weigth 900</p>
+                                </td>
+                            </tr>
+    
+                            <tr>
+                                <td>text-decoration</td>
+                                <td>Texto: decoração</td>
+                                <td>Define decorações de texto<br>
+                                    Pode ser: overline, underline ou line-through.<br>
+                                </td>
+                                <td>#css-text-decoration-overline{<br>
+                                    text-decoration: overline;<br>
+                                }<br>
+                                #css-text-decoration-underline{<br>
+                                    text-decoration: underline;<br>
+                                }<br>
+                                #css-text-decoration-line-through{<br>
+                                    text-decoration: line-through;<br>
+                                }</td>
+                                <td><p id="css-text-decoration-overline">Text-decoration overline</p>
+                                    <p id="css-text-decoration-underline">Text-decoration underline</p>
+                                    <p id="css-text-decoration-line-through">Text-decoration line-through</p>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>text-shadow</td>
+                                <td>Texto: decoração</td>
+                                <td>Define sombra para o texto (efeito de profundidade)<br>
+                                <code>text-shadow: xCoordinate(px) yCoordinate Blur Color;</code></td>
+                                <td>#css-text-shadow1{<br>
+                                    text-shadow: 1px 3px 5px orangered;<br>
+                                }<br>
+                                #css-text-shadow2{<br>
+                                    text-shadow:1px 2px 0px grey;<br>
+                                }</td>
+                                <td><p id="css-text-shadow1">Text-shadow</p>
+                                    <p id="css-text-shadow2">Text-shadow</p>
+                                </td>
+                            </tr>
+                        </div>
+                    </div>
+                    <!--Cor-->
+                    <div>
+                        <tr id="css-cor">
+                            <td>color</td>
+                            <td>Cor</td>
+                            <td>Atribui cor as letras.<br>
+                                Valores podem ser os nomes de cores (existem 140) ou HEX(#FFFFFF) ou RGB(rgb(0,250,0)).
+                            </td>
+                            <td>#css-color-name{<br>
+                                color:teal;<br>
+                            }<br>
+                            #css-color-hex{<br>
+                                color:#27bc56;<br>
+                            }<br>
+                            #css-color-rgb{<br>
+                                color:rgb(97, 12, 78);<br>
+                            }
+                            </td>
+                            <td>
+                                <p id="css-color-name"> Cor por nome</p>
+                                <p id="css-color-hex"> Cor por HEX</p>
+                                <p id="css-color-rgb"> Cor por RGB</p>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>background-color</td>
+                            <td>Cor e Background</td>
+                            <td>Atribui cor ao fundo da box (conteúdo e padding).<br>
+                                Valores podem ser os nomes de cores (existem 140) ou HEX(#FFFFFF) ou RGB(rgb(0,250,0)).
+                            </td>
+                            <td>#css-background-color-name{<br>
+                                background-color: cornflowerblue;<br>
+                            }<br>
+                            #css-background-color-hex{<br>
+                                background-color: #f50036;<br>
+                            }<br>
+                            #css-background-color-rgb{<br>
+                                background-color: rgb(70, 100, 20);<br>
+                            }
+                            </td>
+                            <td>
+                                <p id="css-background-color-name"> Cor de fundo por nome</p>
+                                <p id="css-background-color-hex"> Cor de fundo por HEX</p>
+                                <p id="css-background-color-rgb"> Cor de fundo por RGB</p>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>background-image</td>
+                            <td>Background</td>
+                            <td>Atribui imagem ao fundo da box (conteúdo e padding).                            </td>
+                            <td>#css-background-image{<br>
+                                background-image: url(background-image.jpg);<br>
+                                height:200px;<br>
+                                color:white<br>
+                            }
+                            </td>
+                            <td>
+                                <p id="css-background-image"> Imagem de fundo</p>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>background-repeat</td>
+                            <td>Background</td>
+                            <td>Limita a repetição da imagem de fundo da box vertical ou horizontalmente.                           </td>
+                            <td>#css-background-repeat-x{<br>
+                                background-image: url(icon.png);<br>
+                                height:200px;<br>
+                                background-repeat: repeat-x;<br>
+                            }<br>
+                            #css-background-repeat-y{<br>
+                                background-image: url(icon.png);<br>
+                                height:200px;<br>
+                                background-repeat:repeat-y;<br>
+                            }<br>
+                            #css-background-repeat-round{<br>
+                                background-image: url(icon.png);<br>
+                                height:200px;<br>
+                                background-repeat: round;<br>
+                            }<br>
+                            #css-background-repeat-no{<br>
+                                background-image: url(icon.png);<br>
+                                height:200px;<br>
+                                background-repeat:no-repeat;<br>
+                            }
+                            </td>
+                            <td>
+                                <p id="css-background-repeat-x"> Imagem de fundo repetida x</p>
+                                <p id="css-background-repeat-y"> Imagem de fundo repetida y</p>
+                                <p id="css-background-repeat-round"> Imagem de fundo repetida round</p>
+                                <p id="css-background-repeat-no"> Imagem de fundo não repetida</p>
+                            </td>
+                        </tr>
+
+                    </div>
+                    <!--Alinhamento-->
+                    <div>
+                        <tr id="css-alinhamento">
+                            <td>text-align</td>
+                            <td>Alinhamento: texto</td>
+                            <td>Alinha o texto horizontalmente dentro do container em que está.<br>
+                            Pode ser: center, justify, left ou right. </td>
+                            <td>#css-text-align-center{<br>
+                                text-align:center;<br>
+                            }<br>
+                            #css-text-align-justify{<br>
+                                text-align:justify;<br>
+                            }<br>
+                            #css-text-align-left{<br>
+                                text-align:left;<br>
+                            }<br>
+                            #css-text-align-right{<br>
+                                text-align:right;<br>
+                            }</td>
+                            <td>
+                                <p id="css-text-align-center"> Alinhamento ao centro </p>
+                                <p id="css-text-align-justify"> Alinhamento justificado </p>
+                                <p id="css-text-align-left"> Alinhamento a esquerda </p>
+                                <p id="css-text-align-right"> Alinhamento a direita </p>
+                            </td>
+                        </tr>
+
+                        <tr id="css-alinhamento">
+                            <td>vertical-align</td>
+                            <td>Alinhamento: conteúdo</td>
+                            <td>Alinha o conteúdo de um container verticalmente.<br>
+                                Pode ser: top, middle ou bottom. <br>
+                                Quando em uma unica linha, também pode ser: baseline, sub ou super. <br>
+                             </td>
+                            <td>#css-table-vertical-align{<br>
+                                border:0.1px thin;<br>
+                                height: 200px;<br>
+                            }<br>
+                            #css-vertical-align-top{<br>
+                                vertical-align: top;<br>
+                            }<br>
+                            #css-vertical-align-middle{<br>
+                                vertical-align: middle;<br>
+                            }<br>
+                            #css-vertical-align-bottom{<br>
+                                vertical-align: bottom;<br>
+                            }</td>
+                            <td>
+                                <table id="css-table-vertical-align">
+                                    <tr>
+                                        <td id="css-vertical-align-top"> Topo </td>
+                                        <td id="css-vertical-align-middle"> Meio </td>
+                                        <td id="css-vertical-align-bottom"> Fim </td>
+                                    </tr>
+                                    <tr>
+                                        <td> bas<span id="css-vertical-align-baselin">el</span>ine</td>
+                                        <td>  s<span id="css-vertical-align-sub"> u</span>b</td>
+                                        <td> s<span id="css-vertical-align-super"> upe</span>r</td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </div>
+                    <!--Box properties-->
+                    <div>
+                        <tr id="css-box-properties">
+                            <td>border</td>
+                            <td>Box properties</td>
+                            <td>Adiciona bordas a box<br>
+                                Podem ser utilizadas as propriedades equivalentes: border-width, border-style e border-color respectivamente.<br>
+                                Border-style pode ser solid, dotted, dashed ou double.<br>
+                            <code>
+                                border: tamanho(px) estilo cor; 
+                            </code></td>
+                            <td>#css-box-properties-border1{<br>
+                                border: 3px solid mediumseagreen;<br>
+                            }<br>
+                            #css-box-properties-border2{<br>
+                                border: 10px dotted orchid;<br>
+                            }</td>
+                            <td>
+                                <p id="css-box-properties-border1"> Borda 1 </p>
+                                <p id="css-box-properties-border2"> Borda 2 </p>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>width and height</td>
+                            <td>Box properties</td>
+                            <td>Define a largura ou altura, respetivamente. <br>
+                                Total = elementos + padding + bordas + margens<br>
+                                Pode ser definido em px ou %<br>
+                                Propriedades associadas: max-width, min-width, max-height, min-height</td>
+                            <td>#css-box-properties-width1{<br>
+                                border: 3px solid blue;<br>
+                                width: 120px;<br>
+                            }<br>
+                            #css-box-properties-width2{<br>
+                                border: 3px solid blue;<br>
+                                width:30%;<br>
+                            }<br>
+                            #css-box-properties-height1{<br>
+                                border: 3px solid blue;<br>
+                                height: 300px;<br>
+                            }<br>
+                            #css-box-properties-height2{<br>
+                                border: 3px solid blue;<br>
+                                height:50%;<br>
+                            }</td>
+                            <td>
+                                <p id="css-box-properties-width1"> Width px </p>
+                                <p id="css-box-properties-width2"> Width % </p>
+                                <p id="css-box-properties-height1"> Height px </p>
+                                <p id="css-box-properties-height2"> Height % </p><!--Não está funcionando-->
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>padding</td>
+                            <td>Box properties</td>
+                            <td>Define o espaçamento interno entre a borda e o conteúdo.<br>
+                                Pode ser definido com:
+                                <ul>
+                                    <li>quarto valores (aplicados na sequência: top, right, bottom e left - sentido horário)</li>
+                                    <li>três valores (aplicados top, direita/esquerda e bottom)</li>
+                                    <li>dois valores (aplicado igualmente top/bottom e direita/esquerda)</li>
+                                    <li>um único valor (aplicado igualmente nos 4 lados)</li>
+                                </ul>
+                                Também pode ser definido individualmente atráves de padding-top, padding-bottom, padding-right e padding-left.
+                            </td>
+                            <td>#css-box-properties-padding1{<br>
+                                background-color: #f50036;<br>
+                                padding: 10px;<br>
+                            }<br>
+                            #css-box-properties-padding2{<br>
+                                background-color: greenyellow;<br>
+                                padding: 20px 10px;<br>
+                            }<br>
+                            #css-box-properties-padding3{<br>
+                                background-color: blue;<br>
+                                padding: 30px 150px 10px;<br>
+                            }<br>
+                            #css-box-properties-padding4{<br>
+                                background-color:orange;<br>
+                                padding: 40px 30px 20px 10px;<br>
+                            }</td>
+                            <td>
+                                <p id="css-box-properties-padding4"> Padding 4 </p>
+                                <p id="css-box-properties-padding3"> Padding 3 </p>
+                                <p id="css-box-properties-padding2"> Padding 2 </p>
+                                <p id="css-box-properties-padding1"> Padding 1 </p>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>margin</td>
+                            <td>Box properties</td>
+                            <td>Define o espaçamento externo entre a borda e demais elementos.<br>
+                                Pode ser definido com:
+                                <ul>
+                                    <li>quarto valores (aplicados na sequência: top, right, bottom e left - sentido horário)</li>
+                                    <li>três valores (aplicados top, direita/esquerda e bottom)</li>
+                                    <li>dois valores (aplicado igualmente top/bottom e direita/esquerda)</li>
+                                    <li>um único valor (aplicado igualmente nos 4 lados)</li>
+                                </ul> 
+                                Também pode ser definido individualmente atráves de margin-top, margin-bottom, margin-right e margin-left.
+
+                            </td>
+                            <td>#css-box-back{<br>
+                                background-color: cornflowerblue;<br>
+                            }<br>
+                            #css-box-properties-margin1{<br>
+                                background-color: black;<br>
+                                color:gray;<br>
+                                border:1px solid white;<br>
+                                margin: 20px;<br>
+                            }<br>
+                            #css-box-properties-margin2{<br>
+                                background-color: black;<br>
+                                color:gray;<br>
+                                border:1px solid white;<br>
+                                margin: 40px 20px;<br>
+                            }<br>
+                            #css-box-properties-margin3{<br>
+                                background-color: black;<br>
+                                color:gray;<br>
+                                border:1px solid white;<br>
+                                margin: 60px 40px 20px;<br>
+                            }<br>
+                            #css-box-properties-margin4{<br>
+                                background-color: black;<br>
+                                color:gray;<br>
+                                border:1px solid white;<br>
+                                margin: 80px 60px 40px 20px;<br>
+                            }</td>
+                            <td id="css-box-back">
+                                <hr>
+                                <p id="css-box-properties-margin4"> Margin 4 </p>
+                                <hr>
+                                <p id="css-box-properties-margin3"> Margin 3 </p>
+                                <hr>
+                                <p id="css-box-properties-margin2"> Margin 2 </p>
+                                <hr>
+                                <p id="css-box-properties-margin1"> Margin 1 </p>
+                                <hr>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>display</td>
+                            <td>Box properties</td>
+                            <td>Define o comportamento dos elementos/boxes. <br>
+                                Pode ser: block(vertical), inline, none(esconde o elemento).
+                            </td>
+                            <td>#css-box-properties-display-block{<br>
+                                display: block;<br>
+                            }<br>
+                            #css-box-properties-display-inline{<br>
+                                display: inline;<br>
+                            }<br>
+                            #css-box-properties-display-none{<br>
+                                display: none;<br>
+                            }</td>
+                            <td>
+                                <span id="css-box-properties-display-block">Display</span>
+                                <span id="css-box-properties-display-block">block.</span>
+                                <span id="css-box-properties-display-inline">Display</span>
+                                <span id="css-box-properties-display-inline">inline.</span>
+                                <span id="css-box-properties-display-none">Display</span>
+                                <span id="css-box-properties-display-none">none.</span> </p>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>overflow</td>
+                            <td>Box properties</td>
+                            <td>Define o comportamento dos box quando o conteúdo é maior do que o box em si. <br>
+                                Pode ser: visible(default), scroll(cria barra de rolagem), hidden, ou auto(scroll).
+                            </td>
+                            <td>#css-box-properties-overflow-visible{<br>
+                                background-color: lightcoral;<br>
+                                width: 50px;<br>
+                            }<br>
+                            #css-box-properties-overflow-scroll{<br>
+                                background-color: lightcoral;<br>
+                                width: 50px;<br>
+                                overflow: scroll;<br>
+                            }<br>
+                            #css-box-properties-overflow-hidden{<br>
+                                background-color: lightcoral;<br>
+                                width: 50px;<br>
+                                overflow: hidden;<br>
+                            }<br>
+                            #css-box-properties-overflow-auto{<br>
+                                background-color: lightcoral;<br>
+                                width: 50px;<br>
+                                overflow: auto;<br>
+                            }</td>
+                            <td>
+                                <p id="css-box-properties-overflow-visible">Overflow visible</p>
+                                <p id="css-box-properties-overflow-scroll">Overflow scroll</p>
+                                <p id="css-box-properties-overflow-hidden">Overflow hidden</p>
+                                <p id="css-box-properties-overflow-auto">Overflow auto</p>
+                            </td>
+                        </tr>
+                    </div>
+                    <!--Lista-->
+                    <div>
+                        <tr id="css-lista">
+                            <td>list-style-type</td>
+                            <td>Lista</td>
+                            <td>Define o estilo do marcador da lista.<br>
+                            Pode ser: circle, square, decimal, disc ou lower-alpha.<br>
+                            Propriedades associadas: list-style-image (especifica imagem como marcador) e list-style-position (especifica a posição do marcador (inside ou outside)
+                            </td>
+                            <td>#css-lista-list-style-circle{<br>
+                                list-style-type: circle;<br>
+                            }<br>
+                            #css-lista-list-style-square{<br>
+                                list-style-type: square;<br>
+                            }<br>
+                            #css-lista-list-style-decimal{<br>
+                                list-style-type: decimal;<br>
+                            }<br>
+                            #css-lista-list-style-disc{<br>
+                                list-style-type: disc;<br>
+                            }<br>
+                            #css-lista-list-style-lower-alpha{<br>
+                                list-style-type: lower-alpha;<br>
+                            }</td>
+                            <td><ol id="css-lista-list-style-circle">Lista<li>Item 1</li><li>Item 2</li><Li>Item 3</Li></ol>
+                                <ol id="css-lista-list-style-square">Lista<li>Item 1</li><li>Item 2</li><Li>Item 3</Li></ol>
+                                <ol id="css-lista-list-style-decimal">Lista<li>Item 1</li><li>Item 2</li><Li>Item 3</Li></ol>
+                                <ol id="css-lista-list-style-disc">Lista<li>Item 1</li><li>Item 2</li><Li>Item 3</Li></ol>
+                                <ol id="css-lista-list-style-lower-alpha">Lista<li>Item 1</li><li>Item 2</li><Li>Item 3</Li></ol>
+                            </td>
+                        </tr>
+
+                        <tr id="css-lista">
+                            <td>list-style</td>
+                            <td>Lista</td>
+                            <td>Define o estilo da lista.<br>
+                            Incorpora a função das propriedades: list-style-type, list-style-position e list-style-image, nesta ordem.<br>
+                            <code>
+                                list-style: type position image;
+                            </code>
+                            </td>
+                            <td>#css-lista-list-style{<br>
+                                list-style: lower-alpha inside url(check.png);<br>
+                            }</td>
+                            <td><ol id="css-lista-list-style">Lista<li>Item 1</li><li>Item 2</li><Li>Item 3</Li></ol>
+                            </td>
+                        </tr>
+                    </div>
+                    <!--Tabela-->
+                    <div>
+                        <tr id="css-tabela">
+                            <td>border-collapse</td>
+                            <td>Tabela</td>
+                            <td>Especifica se as bordas serão colapsadas em uma única ou mantidas separaradas como padrão.</td>
+                            <td>#css-tabela-border-normal{<br>
+                                border: 3px solid black;<br>
+                                border-collapse: separate;<br>
+                            }<br>
+                            #css-tabela-border-collapse{<br>
+                                border: 3px solid black;<br>
+                                border-collapse: collapse;<br>
+                            }
+                            </td>
+                            <td>
+                                <table id="css-tabela-border-normal">
+                                    <thead>
+                                        <th> A </th>
+                                        <th> B </th>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td> A 1</td>
+                                            <td> B 1</td>
+                                        </tr>
+                                        <tr>
+                                            <td> A 2</td>
+                                            <td> B 2</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <table id="css-tabela-border-collapse">
+                                    <thead>
+                                        <th> A </th>
+                                        <th> B </th>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td> A 1</td>
+                                            <td> B 1</td>
+                                        </tr>
+                                        <tr>
+                                            <td> A 2</td>
+                                            <td> B 2</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>border-spacing</td>
+                            <td>Tabela</td>
+                            <td>Define o espacamento entre bordas (desde que o collapse seja separate).</td>
+                            <td>#css-tabela-border-spacing1{<br>
+                                border: 3px solid black;<br>
+                                border-collapse: separate;<br>
+                                border-spacing: 40px 20px;<br>
+                            }<br>
+                            #css-tabela-border-spacing2{<br>
+                                border: 3px solid black;<br>
+                                border-collapse: separate;<br>
+                                border-spacing: 20px 40px;<br>
+                            }</td>
+                            <td>
+                                <table id="css-tabela-border-spacing1">
+                                    <thead>
+                                        <th> A </th>
+                                        <th> B </th>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td> A 1</td>
+                                            <td> B 1</td>
+                                        </tr>
+                                        <tr>
+                                            <td> A 2</td>
+                                            <td> B 2</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <table id="css-tabela-border-spacing2">
+                                    <thead>
+                                        <th> A </th>
+                                        <th> B </th>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td> A 1</td>
+                                            <td> B 1</td>
+                                        </tr>
+                                        <tr>
+                                            <td> A 2</td>
+                                            <td> B 2</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>caption-side</td>
+                            <td>Tabela</td>
+                            <td>Define posição do título (top ou bottom).</td>
+                            <td>#css-tabela-caption-top{<br>
+                                border: 3px solid black;<br>
+                                caption-side: top;<br>
+                            }<br>
+                            #css-tabela-caption-bottom{<br>
+                                border: 3px solid black;<br>
+                                caption-side: bottom;<br>
+                            }</td>
+                            <td>
+                                <table id="css-tabela-caption-top">
+                                    <caption>CAPTION</caption>
+                                    <thead>
+                                        <th> A </th>
+                                        <th> B </th>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td> A 1</td>
+                                            <td> B 1</td>
+                                        </tr>
+                                        <tr>
+                                            <td> A 2</td>
+                                            <td> B 2</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <br>
+                                <table id="css-tabela-caption-bottom">
+                                    <caption>CAPTION</caption>
+                                    <thead>
+                                        <th> A </th>
+                                        <th> B </th>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td> A 1</td>
+                                            <td> B 1</td>
+                                        </tr>
+                                        <tr>
+                                            <td> A 2</td>
+                                            <td> B 2</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>empty-cells</td>
+                            <td>Tabela</td>
+                            <td>Define se mostra ou omite células vazias.</td>
+                            <td>#css-tabela-empty-cells-show{<br>
+                                border: 3px solid black;<br>
+                                empty-cells: show;<br>
+                            }<br>
+                            #css-tabela-empty-cells-show{<br>
+                                border: 3px solid black;<br>
+                                empty-cells: hide;<br>
+                            }</td>
+                            <td>
+                                <table id="css-tabela-empty-cells-show">
+                                    <caption>CAPTION</caption>
+                                    <thead>
+                                        <th> A </th>
+                                        <th> B </th>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td> A 1</td>
+                                            <td> B 1</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td> B 2</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <br>
+                                <table id="css-tabela-empty-cells-hide">
+                                    <caption>CAPTION</caption>
+                                    <thead>
+                                        <th> A </th>
+                                        <th> B </th>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td> A 1</td>
+                                            <td> B 1</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td> B 2</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>table-layout</td>
+                            <td>Tabela</td>
+                            <td>Determina estratégia para determinar tamanho das colunas. <br>
+                                Pode ser auto (default) ou fixed.
+                            </td>
+                            <td>#css-tabela-table-layout-auto{<br>
+                                border: 3px solid black;<br>
+                                width:1px;<br>
+                                table-layout: auto;<br>
+                            }<br>
+                            #css-tabela-table-layout-fixed{<br>
+                                border: 3px solid black;<br>
+                                width:1px;<br>
+                                table-layout: fixed;<br>
+                            }</td>
+                            <td>
+                                <table id="css-tabela-table-layout-auto">
+                                    <caption>CAPTION</caption>
+                                    <thead>
+                                        <th> A </th>
+                                        <th> B </th>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td> A11111</td>
+                                            <td> B11111</td>
+                                        </tr>
+                                        <tr>
+                                            <td> A22222</td>
+                                            <td> B22222</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <br>
+                                <table id="css-tabela-table-layout-fixed">
+                                    <caption>CAPTION</caption>
+                                    <thead>
+                                        <th> A </th>
+                                        <th> B </th>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td> A11111</td>
+                                            <td> B11111</td>
+                                        </tr>
+                                        <tr>
+                                            <td> A22222</td>
+                                            <td> B22222</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+
+
+                    </div>
+                    <!--Links-->
+                    <div>
+                        <tr id="css-links">
+                            <td>a:state</td>
+                            <td>Links</td>
+                            <td>Pode definir diferentes estilos (pseudo-selectors) para cada estado do link.<br>
+                            Os estados pode ser:link(normal), visited(após ser visitado), active(após ser clicado) e hover(quando passa o mouse por cima).<br>
+                            Neste caso os estados precisam seguir a determinada ordem: link, visited, hover e active.<br>
+                            Pode ser usado com conjunto com propriedades de texto como text-decoration (none para remover underline), border (none) ou até outline (none).</td>
+                            <td>#css-links-states:link{<br>
+                                color:#f50036;<br>
+                            }<br>
+                            #css-links-states:visited{<br>
+                                color:black;<br>
+                            }<br>
+                            #css-links-states:hover{<br>
+                                font-size: 30px;<br>
+                                font-weight: 900;<br>
+                                color:rgb(70, 100, 20);<br>
+                            }<br>
+                            #css-links-states:active{<br>
+                                color:darkorchid;<br>
+                            }</td>
+                            <td>
+                                <a id="css-links-states" href="https://google.com" target="_blank">Google</a>
+                            </td>
+                        </tr>       
+                    </div>
+                    <!--Mouse cursor-->
+                    <div>
+                        <tr id="css-mouse">
+                            <td>cursor</td>
+                            <td>Mouse cursor</td>
+                            <td>Customiza o cursor do mouse quando passa por cima de determinado elemento.</td>
+                            <td>#css-mouse-help{
+                                cursor:help;
+                            }
+                            #css-mouse-crosshair{
+                                cursor:crosshair;
+                            }
+                            #css-mouse-wait{
+                                cursor:wait;
+                            }
+                            #css-mouse-not-allowed{
+                                cursor:not-allowed;
+                            }
+                            #css-mouse-pointer{
+                                cursor:pointer;
+                            }
+                            #css-mouse-progress{
+                                cursor:progress;
+                            }
+                            #css-mouse-all-scroll{
+                                cursor:all-scroll;
+                            }</td>
+                            <td>
+                                <p id="css-mouse-help">Passe o mouse aqui (cursor:help)</p>
+                                <p id="css-mouse-crosshair">Passe o mouse aqui (cursor:crosshair)</p>
+                                <p id="css-mouse-wait">Passe o mouse aqui (cursor:wait)</p>
+                                <p id="css-mouse-not-allowed">Passe o mouse aqui (cursor:not-allowed)</p>
+                                <p id="css-mouse-pointer">Passe o mouse aqui (cursor:pointer)</p>
+                                <p id="css-mouse-progress">Passe o mouse aqui (cursor:progress)</p>
+                                <p id="css-mouse-all-scroll">Passe o mouse aqui (cursor:all-scroll)</p>
+                            </td>
+                        </tr>
+
+                    </div>
+                    <!--Posicionamento e visibilidade-->
+                    <div>
+                        <tr id="css-posicionamento_visibilidade">
+                            <td>position</td>
+                            <td>Posicionamento e visibilidade</td>
+                            <td>Define posição do elemento. <br>
+                                Pode ser: static, fixed, relative, absolute<br>
+                                Também pode ser definido numericamente atráves de top, right, bottom e left.</td>
+                            <td>#css-position-static{<br>
+                                position:static;<br>
+                            }<br>
+                            #css-position-fixed{<br>
+                                position:fixed;<br>
+                                bottom:10px;<br>
+                                right:10px;<br>
+                            }<br>
+                            #css-position-relative{<br>
+                                position:relative;<br>
+                                bottom:10px;<br>
+                                left:10px;<br>
+                            }<br>
+                            #css-position-absolute{<br>
+                                position:absolute;<br>
+                                top: 26300px;<br>
+                                right:80px;<br>
+                            }</td>
+                            <td>
+                                <p id="css-position-static">Posição static</p>
+                                <p id="css-position-fixed">Posição fixed - flutuaria na tela independente da posicão da tela/scroll.</p>
+                                <p id="css-position-relative">Posição relative</p>
+                                <p id="css-position-absolute">Posição absolute</p>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>floating</td>
+                            <td>Posicionamento e visibilidade</td>
+                            <td>Permite que dado determinado posicionamento de um elementos, os demais de ajustem ao redor dele. <br>
+                                Pode ser:left, right, none.<br>
+                                Também pode ser usado de forma sequencial agrupando diversos elementos lado a lado(desde que a width seja compatível).<br>
+                                Impacta demais elementos que venham depois. Para interromper este efeito deve-se usar a propriedade clear(values:both, right ou left).
+                            </td>
+                            <td>#css-floating-none{<br>
+                                float:none;<br>
+                            }<br>
+                            #css-floating-left{<br>
+                                float:left;<br>
+                            }<br>
+                            #css-floating-left2{<br>
+                                width: 100px;<br>
+                                float:left;<br>
+                            }<br>
+                            #css-floating-right{<br>
+                                float:right;<br>
+                            }</td>
+                            <td>
+                                <img id="css-floating-none" src="background-image.jpg" width="200px" height="auto">
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                <hr>
+                                <img id="css-floating-left" src="background-image.jpg" width="200px" height="auto">
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                <hr>
+                                <img id="css-floating-right" src="background-image.jpg" width="200px" height="auto">
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                <hr>
+                                <img id="css-floating-left" src="background-image.jpg" width="100px" height="auto">
+                                <p id="css-floating-left2">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                <img id="css-floating-left" src="background-image.jpg" width="100px" height="auto">
+                                
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>z-index</td>
+                            <td>Posicionamento e visibilidade</td>
+                            <td>Quando elementos são posicionados fora do fluxo normal, é possível que haja sobreposição com outros elementos. Sendo assim, é possível usar o z-index para definir a profundidade dos elementos na tela.<br>
+                                Aceita valores positivos e negativos<br>
+                                Só funciona para elementos posicionados (position: absolute, relative ou fixed).                                
+                            </td>
+                            <td>#css-floating-none{<br>
+                                float:none;<br>
+                            }<br>
+                            #css-floating-left{<br>
+                                float:left;<br>
+                            }<br>
+                            #css-floating-left2{<br>
+                                width: 100px;<br>
+                                float:left;<br>
+                            }<br>
+                            #css-floating-right{<br>
+                                float:right;<br>
+                            }</td>
+                            <td>
+                                <img id="css-floating-none" src="background-image.jpg" width="200px" height="auto">
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                <hr>
+                                <img id="css-floating-left" src="background-image.jpg" width="200px" height="auto">
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                <hr>
+                                <img id="css-floating-right" src="background-image.jpg" width="200px" height="auto">
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                <hr>
+                                <img id="css-floating-left" src="background-image.jpg" width="100px" height="auto">
+                                <p id="css-floating-left2">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                <img id="css-floating-left" src="background-image.jpg" width="100px" height="auto">
+                                
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>visibility</td>
+                            <td>Posicionamento e visibilidade</td>
+                            <td>Define se o elemento estará visível ou escondido. </td>
+                            <td>#css-visibility-visible{<br>
+                                visibility: visible;<br>
+                            }<br>
+                            #css-visibility-hidden{<br>
+                                visibility: hidden;<br>
+                            }</td>
+                            <td>
+                                <p id="css-visibility-visible">TEXTO visível</p>
+                                <p id="css-visibility-hidden">TEXTO escondido</p>
+
+                            </td>
+                        </tr>
+                    </div>
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+
+</body>
+</html>
